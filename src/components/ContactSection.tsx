@@ -156,7 +156,16 @@ const ContactSection: React.FC = () => {
               <InfoDescription>
                 <strong>Sales Email:</strong>
                 <br />
-                <span style={{ fontWeight: 600, userSelect: 'none', pointerEvents: 'none' }}>
+                <span style={{ 
+                  fontWeight: 600, 
+                  userSelect: 'none', 
+                  pointerEvents: 'none',
+                  fontSize: '0.725rem',
+                  wordBreak: 'break-all',
+                  display: 'inline-block',
+                  maxWidth: '100%',
+                  lineHeight: 1.5
+                }}>
                   {process.env.REACT_APP_EMAIL_SUPPORT}
                 </span>
               </InfoDescription>
