@@ -39,11 +39,11 @@ const HeroSection: React.FC = () => {
         </HeroDescription>
         <Tagline>We specialize in serving merchants who acquire customers through <strong style={{color: '#34d399'}}>SMS marketing campaigns</strong>. Our decline recovery technology is optimized for businesses using text-based acquisition, mobile commerce, and SMS-driven billing flows.</Tagline>
         <CTAButtonGroup>
-          <CTAButtonPrimary onClick={handleRequestDemo}>
+          {/* <CTAButtonPrimary onClick={handleRequestDemo}>
             Request a Demo
-          </CTAButtonPrimary>
+          </CTAButtonPrimary> */}
           <CTAButtonSecondary onClick={handleSpeakToSales}>
-            Talk to Sales
+            Schedule a Call
           </CTAButtonSecondary>
         </CTAButtonGroup>
         <Highlight>We serve only SMS clients.</Highlight>
