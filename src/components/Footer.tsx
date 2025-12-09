@@ -14,15 +14,17 @@ import {
   ContactItem,
   ContactLabel,
   ContactValue,
-  FooterBottom
+  FooterBottom,
+  PaymentIcons,
+  PaymentIcon
 } from '../styles/Footer.styles';
 
 const Footer: React.FC = () => {
-  const brandName = process.env.REACT_APP_BRAND_NAME || 'Voxerra';
+  const brandName = process.env.REACT_APP_BRAND_NAME || 'Mailvoro';
   const companyName = process.env.REACT_APP_COMPANY_NAME || 'Ecomformationusa Inc';
   const companyAddress = process.env.REACT_APP_COMPANY_ADDRESS || '126 Lake Mariam Way, Winter Haven, FL 33884';
   const companyPhone = process.env.REACT_APP_PHONE_DISPLAY || '+12094411840';
-  const supportEmail = process.env.REACT_APP_EMAIL_SUPPORT || 'support@eformcallcenter.com';
+  const supportEmail = process.env.REACT_APP_EMAIL_SUPPORT || 'support@eformdirectmail.com';
 
   const handleScrollTo = (id: string) => {
     // Check if we're on the home page
@@ -44,12 +46,11 @@ const Footer: React.FC = () => {
           <FooterSection>
             <FooterLogo>
               <svg viewBox="0 0 40 40" fill="none">
-                <circle cx="20" cy="20" r="18" fill="#8B5CF6" opacity="0.1"/>
-                <rect x="10" y="12" width="20" height="14" rx="2" stroke="#8B5CF6" strokeWidth="1.5" fill="none"/>
-                <path d="M10 15L20 21L30 15" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="28" cy="28" r="6" fill="#10b981" opacity="0.95"/>
-                <path d="M26 28L27.5 29.5L30 27" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M14 19H18M14 22H22" stroke="#C4B5FD" strokeWidth="1.2" strokeLinecap="round"/>
+                <circle cx="20" cy="20" r="18" fill="#10b981" opacity="0.1"/>
+                <path d="M12 16C12 14.9 12.9 14 14 14H26C27.1 14 28 14.9 28 16V24C28 25.1 27.1 26 26 26H14C12.9 26 12 25.1 12 24V16Z" stroke="#10b981" strokeWidth="2" fill="none"/>
+                <path d="M12 16L20 21L28 16" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M24 22C24 23.66 22.66 25 21 25C19.34 25 18 23.66 18 22C18 20.34 19.34 19 21 19" stroke="#34d399" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M23.5 19.5L21 19L21.5 21.5" stroke="#34d399" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               {brandName}
             </FooterLogo>
@@ -58,6 +59,14 @@ const Footer: React.FC = () => {
               <p>{companyAddress}</p>
               <p>Established {process.env.REACT_APP_COMPANY_BIRTH}</p>
             </CompanyInfo>
+            <PaymentIcons>
+              <PaymentIcon>
+                <img src="/visa.svg" alt="Visa" />
+              </PaymentIcon>
+              <PaymentIcon>
+                <img src="/mastercard.svg" alt="Mastercard" />
+              </PaymentIcon>
+            </PaymentIcons>
           </FooterSection>
 
           <FooterSection>
